@@ -1,0 +1,1 @@
+Os exercícios do dia 2.2 são focados em praticar e memorizar os comandos do Git e Github, plataformas de versionamento e hospedagem de códigos fontes, respectivamente.
