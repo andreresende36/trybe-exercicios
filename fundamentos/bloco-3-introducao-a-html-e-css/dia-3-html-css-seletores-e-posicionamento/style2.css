@@ -1,4 +1,4 @@
-.super-mario {
+  .super-mario {
     width: 8%;
     position: absolute;
   }
@@ -6,8 +6,8 @@
   .goomba {
     width: 6%;
     position: absolute;
-    top: 193px;
-    left: 75px;
+    top: 20.5%;
+    left: 6.2%;
     border-radius: 100%;
   }
   
