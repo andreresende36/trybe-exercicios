@@ -34,6 +34,6 @@ div:nth-child(8){
     text-align: center;
     text-decoration: line-through;
 }
-div:nth-child(even) < h3 {
+div:nth-child(even) h3{
     font-style: italic
   }
