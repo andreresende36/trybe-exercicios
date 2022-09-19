@@ -1,6 +1,30 @@
-body{
-    margin-left: 100px;
+body {
+    background-color:#e9f1ef;
+    margin: 0;
 }
-h1{
-    font-size: 100px;
+h1 {
+    text-align: center;
+    font-family: GeoEditBold,Franklin Gothic Medium,Franklin Gothic,ITC Franklin Gothic,Helvetica,Arial,sans-serif;
+    font-size: 42px;
+    color: #ABC8C0;
+    background-color: #26413C;
+    margin: 0;
+    padding-top: 40px;
+    height: 90px;
+    font-style: italic;
+}
+nav{
+    text-align: end;
+    background-color: rgb(189, 189, 0);
+    height: 40px;
+}
+ul{
+    margin: 0;
+}
+nav ul li {
+    margin-top: 8px;
+    display: inline-block;
+    margin-right: 30px;
+    font-size: 20px;
+    font-family: GeoEditBold,Franklin Gothic Medium,Franklin Gothic,ITC Franklin Gothic,Helvetica,Arial,sans-serif;
 }
