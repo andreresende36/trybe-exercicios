@@ -1,0 +1,39 @@
+div:hover{
+    border: 2px solid green;
+    margin-right: 86%;
+    text-align: center;
+}
+div:nth-child(4){
+    background-color: red;
+    margin-right: 86%;
+    text-align: center;
+    color: purple;
+}
+div:nth-child(5){
+    background-color: rgb(255, 136, 0);
+    margin-right: 86%;
+    text-align: center;
+    color: green;
+}
+div:nth-child(6){
+    background-color: rgb(21, 199, 30);
+    margin-right: 75%;
+    font-size: 2em;
+    text-align: center;
+}
+div:nth-child(7){
+    background-color: rgb(8, 3, 36);
+    margin-right: 86%;
+    color: wheat;
+    text-align: center;
+    font-family: monospace;
+}
+div:nth-child(8){
+    background-color: wheat;
+    margin-right: 86%;
+    text-align: center;
+    text-decoration: line-through;
+}
+div:nth-child(even) h3{
+    font-style: italic
+  }
