@@ -27,6 +27,7 @@ let contador = 0;
 let maiorContagem = 0;
 let maiorPalavra = '';
 
+// Maior palavra
 for (index = 0; index < array.length; index += 1){
   for (let letra of array[index]){
     contador += 1;
@@ -37,4 +38,21 @@ for (index = 0; index < array.length; index += 1){
   }
   contador = 0;
 }
-console.log(maiorPalavra);
+console.log('A maior palavra é ' + maiorPalavra);
+
+// Menor palavra
+let contador2 = 0;
+let menorContagem = Number.POSITIVE_INFINITY;
+let menorPalavra = '';
+
+for (index = 0; index < array.length; index += 1){
+  for (let letra of array[index]){
+    contador2 += 1;
+  }
+  if (contador2 < menorContagem){
+    menorContagem = contador2;
+    menorPalavra = array[index];
+  }
+  contador2 = 0;
+}
+console.log('A menor palavra é ' + menorPalavra);
