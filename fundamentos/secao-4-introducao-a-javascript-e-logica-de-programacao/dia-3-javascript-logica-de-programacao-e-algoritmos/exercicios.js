@@ -56,3 +56,23 @@ for (index = 0; index < array.length; index += 1){
   contador2 = 0;
 }
 console.log('A menor palavra é ' + menorPalavra);
+
+// Números primos entre 2 e 50
+let numeros = [];
+let divisores = 0;
+let numeroPrimo;
+
+for (index = 2; index <= 50; index += 1){
+  numeros.push(index);
+}
+for (index = 0; index < numeros.length; index += 1){
+  for (index2 = 0; index2 <= index; index2 += 1){
+    if (numeros[index]%numeros[index2] === 0)
+      divisores += 1;
+  }
+  if (divisores === 1){
+    numeroPrimo = numeros[index];
+  }
+  divisores = 0;
+}
+console.log('O maior número primo é: ' + numeroPrimo);
