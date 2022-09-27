@@ -30,3 +30,18 @@
 // }
 // let numeros = [2, 3, 6, 7, 10, 1];
 // console.log(retornaMaiorIndex(numeros));
+
+// Retorna maior índice
+function retornaMenorIndex(array) {
+  let menorValor = Number.POSITIVE_INFINITY;
+  let menorIndice = Number.NEGATIVE_INFINITY;
+  for (index = 0; index < array.length; index += 1) {
+    if (array[index] < menorValor){
+      menorValor = array[index];
+      menorIndice = index;
+    }
+  }
+  return menorIndice;
+}
+let numeros = [2, 4, 6, 7, 10, 0, -3];
+console.log(retornaMenorIndex(numeros));
