@@ -50,7 +50,13 @@
     }
     let descricao = 'Me vejo trabalhando na XP Inc. ganhando pelo menos R$12.000,00 por mês'
     visaoFutura('visao', descricao);
-    
+
+    function alteraCorClasse(classe, cor){
+      for (i = 0; i < document.getElementsByClassName(classe).length; i++){
+        document.getElementsByClassName(classe)[i].style.backgroundColor = cor;
+      }
+    }
+    alteraCorClasse('main-content','rgb(76,164,109)')
 /*
 Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
 - document.getElementById()
