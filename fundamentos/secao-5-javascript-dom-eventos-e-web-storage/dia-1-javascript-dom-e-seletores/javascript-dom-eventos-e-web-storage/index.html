@@ -63,9 +63,15 @@
       }
     }
 
+    function alteraTextoTag (tag, texto, numero){
+        document.getElementsByTagName(tag)[numero-1].innerText = texto;
+      }
+
     alteraCorClasse('main-content','rgb(76,164,109)');
     alteraCorClasse('center-content', 'white');
     alteraTituloClasse('title','Exercício - Javascript');
+    alteraTextoTag ('p', 'Seja bem-vindo ao nosso MARAVILHOSO site!', 1);
+
 /*
 Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
 - document.getElementById()
