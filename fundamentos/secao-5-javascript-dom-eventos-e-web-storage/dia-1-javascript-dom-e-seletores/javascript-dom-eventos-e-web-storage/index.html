@@ -56,8 +56,16 @@
         document.getElementsByClassName(classe)[i].style.backgroundColor = cor;
       }
     }
+
+    function alteraTituloClasse (classe, texto){
+      for (i = 0; i < document.getElementsByClassName(classe).length; i++){
+      document.getElementsByClassName(classe)[i].innerText = texto;
+      }
+    }
+
     alteraCorClasse('main-content','rgb(76,164,109)');
     alteraCorClasse('center-content', 'white');
+    alteraTituloClasse('title','Exercício - Javascript');
 /*
 Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
 - document.getElementById()
