@@ -26,3 +26,4 @@ console.log(irmaoElementoOndeVoceEsta);
 console.log(pai.children);
 console.log(elementoOndeVoceEsta.children);
 console.log(primeiroFilhoDoFilho.children);
+console.log(bisneto.parentElement.parentElement.nextElementSibling);
