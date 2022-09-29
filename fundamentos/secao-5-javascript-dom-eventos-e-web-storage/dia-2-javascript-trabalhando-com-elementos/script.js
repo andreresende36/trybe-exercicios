@@ -27,3 +27,8 @@ console.log(pai.children);
 console.log(elementoOndeVoceEsta.children);
 console.log(primeiroFilhoDoFilho.children);
 console.log(bisneto.parentElement.parentElement.nextElementSibling);
+
+bisneto.innerText = "Bisnetão!!!!";
+primeiroFilhoDoFilho.removeChild(bisneto);
+
+const img = document.createElement('img');
