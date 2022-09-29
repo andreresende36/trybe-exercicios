@@ -11,15 +11,15 @@ let elementoOndeVoceEsta = document.querySelector('#elementoOndeVoceEsta');
 let primeiroFilhoDoFilho = document.querySelector('#primeiroFilhoDoFilho');
 let irmaoElementoOndeVoceEsta = document.createElement('section');
 let filhoElementoOndeVoceEsta = document.createElement('section');
-let filhoprimeiroFilhoDoFilho = documento.createElement('section');
+let bisneto = document.createElement('section');
 
 irmaoElementoOndeVoceEsta.id = 'ultimoFilhoMesmo';
 filhoElementoOndeVoceEsta.id = 'filhoDeOndeEstou';
-filhoprimeiroFilhoDoFilho.id = 'filhoDoprimeiroFilhoDoFilho';
+bisneto.id = 'bisneto';
 
 pai.appendChild(irmaoElementoOndeVoceEsta);
 elementoOndeVoceEsta.appendChild(filhoElementoOndeVoceEsta);
-primeiroFilhoDoFilho.appendChild(filhoprimeiroFilhoDoFilho);
+primeiroFilhoDoFilho.appendChild(bisneto);
 
 console.log(pai);
 console.log(irmaoElementoOndeVoceEsta);
