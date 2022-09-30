@@ -11,6 +11,7 @@ function createDaysOfTheWeek() {
   };
 }
 
+// Parte 1
 const decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 let days = document.getElementById('days');
 
@@ -31,8 +32,18 @@ function createDaysOfTheMonth(){
   }
 }
 
+// Parte 2
+let botaoFeriados = document.createElement('button');
+let buttonsContainer = document.querySelector('.buttons-container');
+function criaBotaoFeriados (string){
+  botaoFeriados.id = "btn-holiday";
+  buttonsContainer.appendChild(botaoFeriados);
+}
+
 createDaysOfTheWeek();
 createDaysOfTheMonth();
+criaBotaoFeriados('Feriados');
 
 console.log(days.children);
+console.log(buttonsContainer.children);
 // Escreva seu código abaixo.
