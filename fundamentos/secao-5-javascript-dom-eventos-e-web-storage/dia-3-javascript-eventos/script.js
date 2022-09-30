@@ -63,10 +63,18 @@ function mudaCorFeriados(){
   })
 }
 
+function criaBotaoSexta (string){
+  let botaoSexta = document.createElement('button');
+  botaoSexta.id = 'btn-friday';
+  botaoSexta.innerText = string;
+  buttonsContainer.appendChild(botaoSexta);
+}
+
 createDaysOfTheWeek();
 createDaysOfTheMonth();
 criaBotaoFeriados('Feriados');
 mudaCorFeriados();
+criaBotaoSexta('Sexta-feira');
 
 console.log(days.children);
 console.log(buttonsContainer.children);
