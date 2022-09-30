@@ -35,14 +35,38 @@ function createDaysOfTheMonth(){
 // Parte 2
 let botaoFeriados = document.createElement('button');
 let buttonsContainer = document.querySelector('.buttons-container');
+
 function criaBotaoFeriados (string){
   botaoFeriados.id = "btn-holiday";
   buttonsContainer.appendChild(botaoFeriados);
+  botaoFeriados.innerText = string;
+}
+
+// Parte 3
+let feriados = document.getElementsByClassName('holiday');
+let ligaDesliga = 0;
+
+function mudaCorFeriados(){
+  botaoFeriados.addEventListener('click',function(){
+    if (ligaDesliga === 0) {
+      for (i = 0; i < feriados.length; i++){
+        feriados[i].style.backgroundColor = '#9cff9c';
+      }
+      ligaDesliga = 1;
+    }
+    else {
+      for (i = 0; i < feriados.length; i++){
+        feriados[i].style.backgroundColor = 'rgb(238,238,238)';
+      }
+      ligaDesliga = 0;
+    }
+  })
 }
 
 createDaysOfTheWeek();
 createDaysOfTheMonth();
 criaBotaoFeriados('Feriados');
+mudaCorFeriados();
 
 console.log(days.children);
 console.log(buttonsContainer.children);
