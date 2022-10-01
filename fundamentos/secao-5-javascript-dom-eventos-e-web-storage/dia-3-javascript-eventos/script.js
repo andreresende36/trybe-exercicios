@@ -124,6 +124,13 @@ function criaTarefa(string) {
   minhasTarefas.appendChild(tarefa);
 }
 
+function criaLegenda(cor){
+  let legenda = document.createElement('div');
+  legenda.className = 'task';
+  legenda.style.backgroundColor = cor;
+  minhasTarefas.appendChild(legenda);
+}
+
 createDaysOfTheWeek();
 createDaysOfTheMonth();
 criaBotaoFeriados('Feriados');
@@ -131,7 +138,8 @@ mudaCorFeriados();
 criaBotaoSexta('Sexta-feira');
 mudaCorSexta();
 zoomDay();
-criaTarefa('TRabalhaer');
+criaTarefa('Estudar');
+criaLegenda('blue');
 
 console.log(days.children);
 console.log(buttonsContainer.children);
