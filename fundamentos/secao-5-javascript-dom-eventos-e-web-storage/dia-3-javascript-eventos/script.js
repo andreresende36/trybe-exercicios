@@ -137,15 +137,36 @@ let ligaDesligaLegenda = 0;
 
 function selecionaTarefa() {
   legenda.addEventListener('click', function () {
-    if (ligaDesligaLegenda === 0){
+    if (ligaDesligaLegenda === 0) {
       legenda.className += ' selected';
       ligaDesligaLegenda = 1;
+      legenda.style.boxShadow = '0px 0px 15px green';
     }
     else {
       legenda.className = 'task';
       ligaDesligaLegenda = 0;
+      legenda.style.boxShadow = '0px 0px 0px';
     }
   })
+}
+
+// Parte 10
+
+
+function marcaTarefaCalendario() {  
+  for (i = 0; i < day.length; i++) {
+    day[i].addEventListener('click', function () {
+      const corTarefa = document.querySelector('.selected').style.backgroundColor;
+      if (event.target.style.color !== corTarefa) {
+        event.target.style.color = corTarefa;
+        event.target.style.boxShadow = '0px 0px 3px green';
+      }
+      else {
+        event.target.style.color = "#777";
+        event.target.style.boxShadow = '0px 0px 0px';
+      }
+    });
+  }
 }
 
 createDaysOfTheWeek();
@@ -158,6 +179,7 @@ zoomDay();
 criaTarefa('Estudar');
 criaLegenda('green');
 selecionaTarefa();
+marcaTarefaCalendario();
 
 console.log(days.children);
 console.log(buttonsContainer.children);
