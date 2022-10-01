@@ -100,19 +100,28 @@ function mudaCorSexta() {
 // Parte 6
 let day = document.getElementsByClassName('day');
 
-function zoomDay (){
-  for (i = 0; i < day.length; i++){
-    day[i].addEventListener('mouseover',function(){
+function zoomDay() {
+  for (i = 0; i < day.length; i++) {
+    day[i].addEventListener('mouseover', function () {
       event.target.style.transform = 'scale(1.5)';
       event.target.style.fontWeight = 'bold';
     });
   }
-  for (i = 0; i < day.length; i++){
-    day[i].addEventListener('mouseout',function(){
+  for (i = 0; i < day.length; i++) {
+    day[i].addEventListener('mouseout', function () {
       event.target.style.transform = 'scale(1)';
-      event.target.style.fontWeight = 'normal';      
+      event.target.style.fontWeight = 'normal';
     });
   }
+}
+
+// Parte 7
+let minhasTarefas = document.querySelector(".my-tasks");
+
+function criaTarefa(string) {
+  let tarefa = document.createElement('span');
+  tarefa.innerText = string;
+  minhasTarefas.appendChild(tarefa);
 }
 
 createDaysOfTheWeek();
@@ -122,10 +131,13 @@ mudaCorFeriados();
 criaBotaoSexta('Sexta-feira');
 mudaCorSexta();
 zoomDay();
+criaTarefa('TRabalhaer');
 
 console.log(days.children);
 console.log(buttonsContainer.children);
 console.log(sextas);
 console.log(salvaSextas);
 console.log(day);
+console.log(minhasTarefas.children);
+
 // Escreva seu código abaixo.
