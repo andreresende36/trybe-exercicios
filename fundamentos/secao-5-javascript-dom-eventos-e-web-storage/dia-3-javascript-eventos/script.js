@@ -124,11 +124,28 @@ function criaTarefa(string) {
   minhasTarefas.appendChild(tarefa);
 }
 
-function criaLegenda(cor){
-  let legenda = document.createElement('div');
+// Parte 8
+let legenda = document.createElement('div');
+function criaLegenda(cor) {
   legenda.className = 'task';
   legenda.style.backgroundColor = cor;
   minhasTarefas.appendChild(legenda);
+}
+
+// Parte 9
+let ligaDesligaLegenda = 0;
+
+function selecionaTarefa() {
+  legenda.addEventListener('click', function () {
+    if (ligaDesligaLegenda === 0){
+      legenda.className += ' selected';
+      ligaDesligaLegenda = 1;
+    }
+    else {
+      legenda.className = 'task';
+      ligaDesligaLegenda = 0;
+    }
+  })
 }
 
 createDaysOfTheWeek();
@@ -139,7 +156,8 @@ criaBotaoSexta('Sexta-feira');
 mudaCorSexta();
 zoomDay();
 criaTarefa('Estudar');
-criaLegenda('blue');
+criaLegenda('green');
+selecionaTarefa();
 
 console.log(days.children);
 console.log(buttonsContainer.children);
