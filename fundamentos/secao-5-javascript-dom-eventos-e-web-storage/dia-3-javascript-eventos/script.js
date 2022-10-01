@@ -97,15 +97,35 @@ function mudaCorSexta() {
   })
 }
 
+// Parte 6
+let day = document.getElementsByClassName('day');
+
+function zoomDay (){
+  for (i = 0; i < day.length; i++){
+    day[i].addEventListener('mouseover',function(){
+      event.target.style.transform = 'scale(1.5)';
+      event.target.style.fontWeight = 'bold';
+    });
+  }
+  for (i = 0; i < day.length; i++){
+    day[i].addEventListener('mouseout',function(){
+      event.target.style.transform = 'scale(1)';
+      event.target.style.fontWeight = 'normal';      
+    });
+  }
+}
+
 createDaysOfTheWeek();
 createDaysOfTheMonth();
 criaBotaoFeriados('Feriados');
 mudaCorFeriados();
 criaBotaoSexta('Sexta-feira');
 mudaCorSexta();
+zoomDay();
 
 console.log(days.children);
 console.log(buttonsContainer.children);
 console.log(sextas);
 console.log(salvaSextas);
+console.log(day);
 // Escreva seu código abaixo.
