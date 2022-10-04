@@ -151,8 +151,6 @@ function selecionaTarefa() {
 }
 
 // Parte 10
-
-
 function marcaTarefaCalendario() {  
   for (i = 0; i < day.length; i++) {
     day[i].addEventListener('click', function () {
@@ -162,11 +160,16 @@ function marcaTarefaCalendario() {
         event.target.style.boxShadow = '0px 0px 3px green';
       }
       else {
-        event.target.style.color = "#777";
+        event.target.style.color = "rgb(119,119,119)";
         event.target.style.boxShadow = '0px 0px 0px';
       }
     });
   }
+}
+
+// Bônus
+function adicionaCompromissos (){
+  
 }
 
 createDaysOfTheWeek();
