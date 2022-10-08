@@ -1,52 +1,61 @@
-let button = document.getElementById('button');
+window.onload = function () {
+  clearButton();
+  const submitBtn = document.getElementById('button');
+  submitBtn.addEventListener('click', turnOffButton);
+  submitBtn.addEventListener('click', function () {
+    if (textInputValidation()) {
+      alert('Dados enviados com sucesso! Obrigado por participar do concurso TrybeTrip.');
+    }
+    else {
+      alert('Dados inválidos!')
+     }
+  })
+  const agreement = document.getElementById('agreement');
+  agreement.addEventListener('change', enableSubmit);
+}
 
-// function desligaBotao() {
-//   button.addEventListener('click', function () {
-//     event.preventDefault();
-//   })
-// }
+function clearButton() {
+  const secaoBotoes = document.getElementById('botoes');
+  const reset = document.createElement('input');
+  reset.type = 'reset';
+  reset.name = 'reset';
+  reset.id = 'resetButton';
+  reset.value = 'Limpar';
+  secaoBotoes.appendChild(reset);
+}
 
-let secaoBotoes = document.getElementById('botoes');
-let reset = document.createElement('input');
-reset.type = 'reset';
-reset.name = 'reset';
-reset.id = 'resetButton';
-reset.value = 'Limpar';
+function enableSubmit() {
+  const submitBtn = document.getElementById('button');
+  const agreement = document.getElementById('agreement');
+  submitBtn.disabled = !agreement.checked;
+}
 
-secaoBotoes.appendChild(reset);
-
-let agreement = document.getElementById('agreement');
-let fullName = JSON.stringify(document.getElementById('fullName').value);
-let inputEmail = JSON.stringify(document.getElementById('input-email').value);
-let inputDiscurso = JSON.stringify(document.getElementById('input-discurso').value);
-
-button.addEventListener('click', function () {
-  let counter1 = 0;
-  let counter2 = 0;
-  let counter3 = 0;
-
-  if (!agreement.checked) {
+function turnOffButton() {
+  const submitBtn = document.getElementById('button');
+  submitBtn.addEventListener('click', function () {
     event.preventDefault();
-    alert('Você deve concordar com o uso das imagens para continuar!')
-  }
-  else{
-    for (let caracter of fullName) {
-      counter1++;
-    }
-    for (let caracter of inputEmail) {
-      counter2++
-    }
-    for (let caracter of inputDiscurso) {
-      counter3++
-    }
-    event.preventDefault();
-    document.getElementById('teste1').innerHTML = fullName;
-    document.getElementById('teste2').innerHTML = inputEmail;
-    document.getElementById('teste3').innerHTML = inputDiscurso;
+  })
+}
 
-    // if (counter1 < 10 || counter1 > 40 || counter2 < 10 || counter2 > 50 || counter3 > 500){
-    //   event.preventDefault();
-    //   alert('Dados Inválidos');
-    // }
+function textInputValidation() {
+  const fullName = document.getElementById('fullName').value.length;
+  const invalidName = fullName < 10 || fullName > 40;
+  // console.log(fullName);
+
+  const inputEmail = document.getElementById('input-email').value.length;
+  const invalidEmail = inputEmail < 10 || inputEmail > 50;
+  // console.log(inputEmail);
+
+  const inputDiscurso = document.getElementById('input-discurso').value.length;
+  const invalidDiscurso = inputDiscurso > 500;
+  // console.log(inputDiscurso);
+
+  if (invalidName || invalidEmail || invalidDiscurso) {
+    return false
   }
-})
+  else {
+    return true;
+  }
+}
+
+console.log(fullName);
