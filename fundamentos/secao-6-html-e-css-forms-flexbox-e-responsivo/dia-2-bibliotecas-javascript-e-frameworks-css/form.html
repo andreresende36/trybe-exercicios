@@ -14,58 +14,56 @@
   <!-- Pikaday CSS-->
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
 </head>
-<body>
+<body class="text-bg-success">
   <header>
-    <h1>TrybeTrip</h1>
+    <h1 class="text-center display-2 mt-2 fw-semibold" >TrybeTrip</h1>
   </header>
-  <form action="" method="get">
+  <form action="" method="get" class="container">
   <fieldset id="fieldForm">
       <!-- Nome -->
-      <label for="fullName">Nome:</label>
-      <input type="text" name="nomeCompleto" id="fullName" minlength="10" maxlength="40" autocomplete="on" required placeholder="Digite seu nome completo..." size="40">
+      <label class="form-label" for="fullName">Nome:</label>
+      <input class="form-control" type="text" name="nomeCompleto" id="fullName" minlength="10" maxlength="40" autocomplete="on" required placeholder="Digite seu nome completo..." size="40">
       <br>
 
       <!-- Email -->
-      <label for="input-email">Email:</label>
-      <input type="email" name="email" id="input-email" minlength="10" maxlength="50" size="40" placeholder="Digite aqui seu e-mail...">
+      <label class="form-label" for="input-email">Email:</label>
+      <input class="form-control" type="email" name="email" id="input-email" minlength="10" maxlength="50" size="40" placeholder="Digite aqui seu e-mail...">
       <br>
 
       <!-- Destino Preferido -->
-      <label for="cidade"><input type="radio" name="destino" id="cidade" value="cidade">Cidade</label>
+      <p class="fs-5 fw-semibold">Qual destino você prefere?</p>
+      <label class="form-check-label mb-3" for="cidade"><input type="radio" name="destino" id="cidade" value="cidade" class="form-check-input">  Cidade</label>
       
-      <label for="campo"><input type="radio" name="destino" id="campo" value="campo">Campo</label>
+      <label class="form-check-label mb-3" for="campo"><input type="radio" name="destino" id="campo" value="campo" class="form-check-input">  Campo</label>
 
-      <label for="praia"><input type="radio" name="destino" id="praia" value="praia">Praia</label>
+      <label class="form-check-label mb-3" for="praia"><input type="radio" name="destino" id="praia" value="praia" class="form-check-input">  Praia</label>
 
-      <label for="montanhas"><input type="radio" name="destino" id="montanhas" value="montanhas">Montanhas</label>
+      <label class="form-check-label mb-3" for="montanhas"><input type="radio" name="destino" id="montanhas" value="montanhas" class="form-check-input"> Montanhas</label>
 
       <!-- Espaço digitação -->
-        <p><strong>Nos conte porque você deveria ser o escolhido para ganhar o concurso TrybeTrip:</strong></p>
-        <textarea name="discurso" id="input-discurso" cols="62" rows="10" maxlength="500" placeholder="Digite aqui sua resposta (no máximo 500 caracteres)"></textarea>
+        <p class="fs-5 mt-2 fw-semibold">Conte-nos porque você deveria ser o escolhido para ganhar o concurso TrybeTrip:</p>
+        <textarea class="form-control" name="discurso" id="input-discurso" cols="62" rows="10" maxlength="500" placeholder="Digite aqui sua resposta (no máximo 500 caracteres)"></textarea>
         <br>
 
       <!-- Data -->
-        <label for="date">Data:</label>
-        <input type="date" name="data" id="date">
+        <label class="form-label" for="date">Data:</label>
+        <input type="text" name="data" id="datepicker">
         <br>
 
       <!-- Concordância -->
         <!-- Checkbox 1 -->
-        <input type="checkbox" name="oportunidades" id="promotion">
-        <label for="promotion">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+        <input type="checkbox" name="oportunidades" id="promotion" class="form-check-input">
+        <label class="form-check-label" for="promotion">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
         <br>
 
         <!-- Checkbox 2 -->
-        <input type="checkbox" name="aceite" id="agreement" required>
-        <label for="agreement">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+        <input type="checkbox" name="aceite" id="agreement" class="form-check-input" required>
+        <label class="form-check-label" for="agreement">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
 
       <!-- Botão de enviar -->
       <section id="botoes">
-        <input type="submit" value="Enviar" id="button" disabled>
+        <input class="btn btn-primary mt-3" type="submit" value="Enviar" id="button" disabled>
       </section>
-      <p id="teste1"></p>
-      <p id="teste2"></p>
-      <p id="teste3"></p>
   </fieldset>
   </form>
   <script src="script.js"></script>
@@ -73,5 +71,11 @@
   <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
   <!-- Datepicker JS -->
   <script src="dist/js/DatePickerX.min.js"></script>
+  <!-- Just Validate -->
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+
+  <script>
+    let picker = new Pikaday({ field: document.getElementById('datepicker') });
+  </script>
 </body>
 </html>

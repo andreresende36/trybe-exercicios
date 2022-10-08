@@ -21,6 +21,7 @@ function clearButton() {
   reset.name = 'reset';
   reset.id = 'resetButton';
   reset.value = 'Limpar';
+  reset.className += ' btn btn-secondary mt-3';
   secaoBotoes.appendChild(reset);
 }
 
