@@ -2,14 +2,14 @@ window.onload = function () {
   clearButton();
   const submitBtn = document.getElementById('button');
   submitBtn.addEventListener('click', turnOffButton);
-  submitBtn.addEventListener('click', function () {
-    if (textInputValidation()) {
-      alert('Dados enviados com sucesso! Obrigado por participar do concurso TrybeTrip.');
-    }
-    else {
-      alert('Dados inválidos!')
-     }
-  })
+  // submitBtn.addEventListener('click', function () {
+  //   if (textInputValidation()) {
+  //     alert('Dados enviados com sucesso! Obrigado por participar do concurso TrybeTrip.');
+  //   }
+  //   else {
+  //     alert('Dados inválidos!')
+  //    }
+  // })
   const agreement = document.getElementById('agreement');
   agreement.addEventListener('change', enableSubmit);
 }
