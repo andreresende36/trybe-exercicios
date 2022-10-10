@@ -5,6 +5,76 @@
   font-family: 'Ubuntu';
 }
 
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #323433;
+  color: #ECE6DE;
+  /* border: 2px solid red; */
+}
+
+h1 {
+  font-size: 22px;
+}
+
+#signup {
+  /* text-decoration: none; */
+  color: #ECE6DE;
+}
+
+#technologies {
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+}
+
+#central-container {
+  display: flex;
+  justify-content: center;
+}
+
+#techs-boxes {
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+  text-align: center;
+  flex-wrap: wrap;
+  margin: 15px 28% 10px 28%;
+  width: 595px;
+  height: 500px;
+  /* border: 2px solid red; */
+}
+
+.img-box {
+  background-color: #F1F1F1;
+  padding: 20px;
+  border-radius: 7%;
+  box-shadow: 1px 1px 5px rgb(43, 43, 43);
+  width: 180px;
+  height: 230px;
+}
+
+.img-box:hover {
+  transform: scale(1.025);
+}
+
+.img-box h4 {
+  margin-bottom: 10px;
+  color: #323433;
+}
+
+hr{
+  width: 180px;
+  margin: 10px auto;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
 .header-img {
   width: 70px;
 }
