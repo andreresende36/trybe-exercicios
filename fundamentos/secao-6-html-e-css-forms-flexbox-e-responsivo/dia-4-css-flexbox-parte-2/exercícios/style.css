@@ -17,7 +17,7 @@ body {
 .logo-container {
   display: flex;
   justify-content: center;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   flex-basis: 268px;
   order: -1;
 }
@@ -25,7 +25,7 @@ body {
 .menu-container {
   display: flex;
   flex-basis: 500px;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   flex-grow: 1;
 }
 
@@ -84,7 +84,7 @@ body {
   flex-direction: column;
   margin: 20px;
   flex-basis: 350px;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   align-self: center;
 }
 
