@@ -16,15 +16,24 @@ header p {
   text-align: center;
 }
 
+nav {
+  display: flex;
+  justify-content: flex-end;
+  /* border: 2px solid red; */
+}
+
 nav ul {
   display: flex;
-  justify-content: space-between;
-  margin: 0 3% 0 40%;
-
+  justify-content: flex-end;
+  margin: 0;
+  /* border: 2px solid rgb(0, 255, 13); */
+  padding: 0;
 }
 
 nav ul li {
   list-style: none;
+  /* border: 2px solid red; */
+  margin-left: 10px;
 }
 
 h1 {
@@ -62,15 +71,24 @@ footer p {
     text-align: center;
   }
   
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    /* border: 2px solid red; */
+  }
+  
   nav ul {
     display: flex;
-    justify-content: space-between;
-    margin: 0 2% 0 57%;
-  
+    justify-content: flex-end;
+    margin: 0;
+    /* border: 2px solid rgb(0, 255, 13); */
+    padding: 0;
   }
   
   nav ul li {
     list-style: none;
+    /* border: 2px solid red; */
+    margin-left: 10px;
   }
   
   h1 {
