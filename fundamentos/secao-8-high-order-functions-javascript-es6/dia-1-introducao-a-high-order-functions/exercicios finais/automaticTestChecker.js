@@ -1,19 +1,19 @@
-const check = (array1, array2) => {
-  let grade = 0;
-  array1.forEach((element,i) => {
-    if (element === array2[i]){
-      grade += 1;
-    } else if (element === 'N.A'){
-      grade += 0;
-    } else if (element !== array2[i] ) {
-      grade -= 0.5;
-    }
-  });
-  return `A pontuação final da pessoa estudante é: ${grade}`;
+const check = (solution, answer) => {
+  if (solution === answer){
+    return 1;
+  } else if (answer === 'N.A'){
+    return 0;
+  }
+  return -0.5;
 }
 
 const checker = (solution, answer, func) => {
-  return func(answer,solution);
+  let grade = 0;
+  solution.forEach((element,i) => {
+    let counter = func(element,answer[i]);
+    grade += counter;
+  });
+  return `Pontuação final: ${grade}`;
 }
 
 const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];

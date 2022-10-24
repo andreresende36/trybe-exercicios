@@ -1,13 +1,17 @@
 const employeeReg = (name) =>{
-  const arrayName = name.split(' ');
-  let email = '';
-  arrayName.forEach((element,i) => {
-    if(i+1 < arrayName.length){
-      email += `${element.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase()}_`
-    } else {
-      email += `${element.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase()}@trybe.com`
-    }
-  });
+  
+  const email = `${name.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase().split(' ').join('_')}@trybe.com`;
+
+  // Minhas respostas estão aqui comentadas
+  // const arrayName = name.split(' ');
+  // const email = '';
+  // arrayName.forEach((element,i) => {
+  //   if(i+1 < arrayName.length){
+  //     email += `${element.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase()}_`
+  //   } else {
+  //     email += `${element.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase()}@trybe.com`
+  //   }
+  // });
   
   return {nomeCompleto: name, email: email}
 }
