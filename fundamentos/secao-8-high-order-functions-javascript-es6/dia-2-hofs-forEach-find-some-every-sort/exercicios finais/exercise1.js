@@ -61,4 +61,54 @@ const books = [
   },
 ];
 
-// Adicione o código do exercício aqui:
+const authorBornIn1947 = (item) => item.author.birthYear === 1947;
+const finder = (array, callback) => array.find(callback).author.name;
+// console.log(finder(books, authorBornIn1947));
+
+
+
+function smallerName(array) {
+  let nameBook;
+  let counter = Number.POSITIVE_INFINITY;
+  array.forEach(element => {
+    if (element.name.length < counter) {
+      nameBook = element.name;
+      counter = element.name.length;
+    }
+  });
+  return nameBook;
+}
+// console.log(smallerName(books));
+
+
+
+const count26char = (item) => item.name.length === 26;
+const getNamedBook = (array) => array.find(count26char).name;
+// console.log(getNamedBook(books));
+
+
+
+const booksOrderedByReleaseYearDesc = (array) => array.sort((a,b) => b.releaseYear - a.releaseYear)
+// console.log(booksOrderedByReleaseYearDesc(books));
+
+const everyoneWasBornOnSecXX = (array) => array.every(element => element.author.birthYear > 1900)
+// console.log(everyoneWasBornOnSecXX(books));
+
+
+function someBookWasReleaseOnThe80s(array) {
+  return array.some(element => element.releaseYear >= 1980 && element.releaseYear < 1990)
+}
+// console.log(someBookWasReleaseOnThe80s(books));
+
+
+const expectedResult = false;
+const authorUnique1 = (array) => {
+  return array.every((element) => !array.some((element2) => (element2.author.name !== element.author.name) && (element2.author.birthYear === element.author.birthYear)))
+}
+console.log(authorUnique1(books));
+
+
+// function authorUnique2() {
+//   return books.every((book) => !books.some((bookSome) => (bookSome.author.name !== book.author.name) && (bookSome.author.birthYear === book.author.birthYear)));
+// }
+// console.log(authorUnique2());
