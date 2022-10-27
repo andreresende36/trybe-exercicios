@@ -4,8 +4,11 @@ const names = [
   'Abeladerco', 'Adieidy', 'Alarucha',
 ];
 
-const expectedResult = 20;
-
-function containsA() {
-  // escreva seu código aqui
+const callback = (acc,curr,i,array) => {
+  const arrayWord = curr.toLowerCase().split('').filter((element) => element === 'a')
+  return acc + arrayWord.length
 }
+const containsA = (array) => {
+  return array.reduce(callback, 0)
+}
+console.log(containsA(names));
