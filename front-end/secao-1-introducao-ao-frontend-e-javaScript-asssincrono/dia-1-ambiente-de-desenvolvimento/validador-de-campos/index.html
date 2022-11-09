@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validador de Campo</title>
+</head>
+
+<body>
+  <header>
+    <h1>Validador de Campos</h1>
+  </header>
+  <main>
+    <form action="">
+      <label for="text">Insira abaixo o texto a ser validado:</label>
+      <br>
+      <input type="text" id="text">
+      <br>
+      <div id="div-select">
+        <label for="validation">Tipo de Validação:</label>
+        <select id="validation">
+          <option value="isLowercase">Minúsculas</option>
+          <option value="isUppercase">Maiúsculas</option>
+          <option value="isNumeric">Números</option>
+          <option value="isURL">URL</option>
+          <option value="isHexColor">Cor Hexadecimal</option>
+        </select>
+      </div>
+      <br>
+      <button>Enviar</button>
+      <h2></h2>
+    </form>
+  </main>
+  <script src="src/main.js" type="module"></script>
+</body>
+
+</html>
