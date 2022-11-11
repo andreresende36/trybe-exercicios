@@ -1,0 +1,93 @@
+body, html {
+  margin: 0;
+  font-family: 'Fira Code';
+  background-color: #282C33;
+}
+
+#title {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 79px;
+  margin-left: 12%;
+  color: #FFFFFF;
+}
+
+#coin-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 80px;
+  width: fit-content;
+  margin-left: 12%;
+}
+
+label {
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+#catch-coin {
+  display: flex;
+}
+
+#coin-input{
+  width: 225px;
+  background: rgba(217, 217, 217, 0.1);
+  border: none;
+  color: #FFFFFF;
+}
+
+#search-button{
+  margin-left: 10px;
+  color: #373737;
+  font-weight: 700;
+  background-color: #96EB95;
+  padding: 6px 20px;
+}
+#search-button:hover {
+  transform: scale(1.01);
+}
+#coin-table {
+  background-color: rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  /* border: 2px solid red; */
+  width: 900px;
+  min-height: 440px;
+  margin: 10px 12%;
+}
+
+#coin-display{
+  padding-top: 15px;
+  margin-bottom: 15px;
+  color: #FFFFFF;
+  text-align: center; 
+}
+
+#coins-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  /* border: 2px solid red; */
+}
+
+.coin-box{
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #2A2E32;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 160px;
+}
+
+.coin-rate {
+  color: rgb(255, 0, 0);
+  font-size: 50px;
+}
+
+#coin-image{
+  width: 20px;
+}
