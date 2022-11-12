@@ -1,5 +1,6 @@
 import './style.css';
 import Swal from 'sweetalert2';
+import imgUrl from '../img/coin-stack.png';
 
 const searchButton = document.getElementById('search-button');
 const coinInput = document.getElementById('coin-input');
@@ -26,7 +27,7 @@ const fetchAPI = (coin) => fetch(`https://api.exchangerate.host/latest?base=${co
   }));
 
 const fillCoinsList = () => {
-  const coin = coinInput.value;
+  const coin = coinInput.value.toUpperCase();
   let arrayRates = [];
   coinsList.innerHTML = '';
   fetchAPI(coin).then((data) => {
@@ -34,20 +35,20 @@ const fillCoinsList = () => {
     arrayRates.forEach((element) => {
       const [key, value] = element;
       const coinBox = document.createElement('div');
+      const container = document.createElement('div');
       const coinImage = document.createElement('img');
       const coinName = document.createElement('span');
       const coinRate = document.createElement('span');
 
       coinBox.className = 'coin-box';
-      coinImage.src = '../img/coin-stack.png';
+      coinImage.src = imgUrl;
       coinImage.id = 'coin-image';
       coinName.innerHTML = key;
+      coinName.id = 'coin-name';
       coinRate.innerHTML = value;
-      coinRate.style.color = '#FFE713';
-      coinRate.style.fontWeight = '600';
-      coinBox.appendChild(coinImage);
-      coinBox.appendChild(coinName);
-      coinBox.appendChild(coinRate);
+      coinRate.className = 'coin-rate';
+      container.append(coinImage, coinName);
+      coinBox.append(container, coinRate);
       coinsList.appendChild(coinBox);
     });
   });
