@@ -1,0 +1,17 @@
+{
+  "name": "cep",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "dev": "vite --open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^3.3.0",
+    "vite": "^3.2.3"
+  },
+  "type": "module"
+}
