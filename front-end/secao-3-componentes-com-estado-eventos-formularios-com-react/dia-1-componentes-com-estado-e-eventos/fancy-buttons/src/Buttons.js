@@ -1,24 +1,25 @@
 import React from 'react';
 
-function silvio() {
-  return console.log('Ai ai ai ui ui!')
-}
-
-function ratinho() {
-  return console.log('Ratinhooooo!')
-}
-
-function chaves() {
-  return console.log('Ngm tem paciência comigo!')
-}
-
 class Buttons extends React.Component {
-  render(){
+  state = {
+    botao1: 0,
+    botao2: 0,
+    botao3: 0,
+  }
+  
+  counter = ({ target }) => {
+    this.setState((prevState) => ({ 
+      [target.id]: prevState[target.id] + 1,
+    }))
+    target.innerHTML = this.state.target.id
+  }
+
+  render(){  
     return(
       <>
-        <button onClick={silvio}>Silvio</button>
-        <button onClick={ratinho}>Ratinho</button>
-        <button onClick={chaves}>Chaves</button>
+        <button onClick={this.counter} id='botao1'>{this.state.botao1}</button>
+        <button onClick={this.counter} id='botao2'>{this.state.botao2}</button>
+        <button onClick={this.counter} id='botao3'>{this.state.botao3}</button>
       </>
     );
   }
