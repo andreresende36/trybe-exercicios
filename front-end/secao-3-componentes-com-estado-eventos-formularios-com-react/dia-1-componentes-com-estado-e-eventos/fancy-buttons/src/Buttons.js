@@ -10,8 +10,17 @@ class Buttons extends React.Component {
   counter = ({ target }) => {
     this.setState((prevState) => ({ 
       [target.id]: prevState[target.id] + 1,
-    }))
-    target.innerHTML = this.state.target.id
+    }), () => {
+      const buttonTarget = target.id;
+      const newNumber = this.state[buttonTarget]
+      if (newNumber % 2 === 0){
+        target.style.backgroundColor = 'green';
+        console.log(target.style.backgroundColor);
+      } else {
+        target.style.backgroundColor = 'white';
+        console.log(target.style.backgroundColor);
+      }
+    });
   }
 
   render(){  
