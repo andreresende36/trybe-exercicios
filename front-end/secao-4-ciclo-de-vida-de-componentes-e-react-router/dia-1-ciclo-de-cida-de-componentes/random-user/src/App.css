@@ -1,0 +1,12 @@
+.App {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid red; */
+  height: 100vh;
+  text-align: center;
+  flex-direction: column;
+}
+
